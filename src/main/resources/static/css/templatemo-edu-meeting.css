@@ -250,7 +250,7 @@ header
   top: 0!important;
   left: 0;
   right: 0;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15)!important;
 }
 
 .background-header .main-nav .nav li a {
@@ -334,7 +334,7 @@ header
 
 .header-area .main-nav .nav li a {
   display: block;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
@@ -368,7 +368,7 @@ header
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.3);
   position: absolute;
   right: 5px;
   top: 12px;
@@ -409,6 +409,32 @@ header
     left: 0; /* Set left to 0 for the main menu sub-menu */
     top: 100%; /* Set top to 100% for the main menu sub-menu */
   }
+  /* CHANGED */
+  .main-menu {
+    list-style: none;
+    padding: 0;
+  }
+
+  .main-menu > li {
+    position: relative;
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  .main-menu > li:hover .sub-menu {
+    display: block;
+  }
+
+  .sub-menu > li {
+    white-space: normal; /* Prevent text from wrapping */
+  }
+  /* CHANGED */
 
   .header-area .main-nav .nav li.has-sub:not(.main-menu):hover > ul.sub-menu {
     left: 100%; /* Set left to 100% for sub-menu items on hover */
@@ -437,26 +463,38 @@ header
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
   opacity: 1;
   display: block;
-  background: #f7f7f7;
-  color: #2a2a2a!important;
+  background: rgba(0, 0, 0, 0.06);
+  @media screen and (max-width: 767px) {
+    color: #2a2a2a!important;
+  }
+
+  @media screen and (min-width: 768px) {
+    color: #ffffff !important;
+  }
+
+
   padding-left: 20px;
-  height: 40px;
-  line-height: 40px;
+  height: min-content;
+  line-height: 35px;
+  max-height: 90px;
+
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
-  font-size: 13px;
-  font-weight: 400;
-  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #626262;
+
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3); /* CHANGED OPACITY */
   color: #f5a425!important;
   padding-left: 25px;
 }
+
 
 .header-area .main-nav .nav li.has-sub ul li a:hover:before {
   width: 3px;
@@ -489,7 +527,6 @@ header
 
 .header-area .main-nav .menu-trigger {
   cursor: pointer;
-  display: block;
   position: absolute;
   top: 33px;
   width: 32px;
@@ -638,7 +675,7 @@ header
   }
   .header-area {
     background-color: #f7f7f7;
-    padding: 0px 15px;
+    padding: 0 15px;
     height: 100px;
     box-shadow: none;
     text-align: center;
@@ -666,7 +703,7 @@ header
     margin-left: 0;
   }
   .header-area .main-nav .nav li:first-child {
-    border-top: 1px solid #eee;
+    border-top: none;
   }
   .header-area.header-sticky .nav {
     margin-top: 100px !important;
@@ -674,14 +711,14 @@ header
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
-    border-bottom: 1px solid #eee;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    border-bottom: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .header-area .main-nav .nav li a {
     height: 50px !important;
     line-height: 50px !important;
-    padding: 0px !important;
+    padding: 0 !important;
     border: none !important;
     background: #f7f7f7 !important;
     color: #191a20 !important;
@@ -713,7 +750,7 @@ header
     height: auto;
   }
   .header-area .main-nav .nav li.has-sub:after {
-    color: #3B566E;
+    color: rgba(42, 48, 77, 0.3);
     right: 30px;
     font-size: 14px;
     top: 15px;
@@ -728,6 +765,7 @@ header
     display: flex !important;
   }
 }
+
 
 
 /* 
@@ -1225,7 +1263,7 @@ section.our-courses {
   width: 7px;
   height: 7px;
   background-color: #fff;
-  margin: 0px 5px;
+  margin: 0 5px;
   border-radius: 50%;
   outline: none;
 }
@@ -1314,7 +1352,7 @@ section.our-facts {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 0px 125px 0;
+  padding: 140px 0 125px 0;
 }
 
 section.our-facts h2 {
@@ -1384,7 +1422,7 @@ section.contact-us {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 0px 0px 0;
+  padding: 140px 0 0 0;
 }
 
 section.contact-us #contact {
@@ -1414,7 +1452,7 @@ section.contact-us #contact input {
   font-size: 13px;
   font-weight: 500;
   color: #7a7a7a;
-  padding: 0px 15px;
+  padding: 0 15px;
   margin-bottom: 30px;
 }
 
@@ -1570,7 +1608,7 @@ section.meetings-page .filters li {
   text-transform: uppercase;
   transition: all .3s;
   cursor: pointer;
-  margin: 0px 3px;
+  margin: 0 3px;
 }
 
 section.meetings-page .filters ul li.active,
