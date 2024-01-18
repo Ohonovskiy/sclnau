@@ -44,7 +44,7 @@ https://templatemo.com/tm-569-edu-meeting
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="#top" class="active">Головна</a></li>
 
                         <li class="has-sub main-menu">
                           <a href="javascript:void(0)" class="non-clickable">Про нас</a>
@@ -869,7 +869,17 @@ https://templatemo.com/tm-569-edu-meeting
     <script src="/js/video.js"></script>
     <script src="/js/slick-slider.js"></script>
     <script src="/js/custom.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.header-area .main-nav .nav').on('click', 'li.has-sub > a', function (event) {
+          event.preventDefault();
+          var $parentLi = $(this).parent('li.has-sub');
+          $parentLi.toggleClass('active').siblings().removeClass('active');
+        });
+      });
+    </script>
 
 </body>
 
