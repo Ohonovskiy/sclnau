@@ -35,6 +35,14 @@ reset
 --------------------------------------------- 
 */
 
+:root {
+  --primary-color: #53c25e;
+  --white: #ffffff;
+}
+
+
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -131,12 +139,12 @@ body {
 }
 
 ::selection {
-  background: #f5a425;
+  background: var(--primary-color);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #f5a425;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -175,7 +183,7 @@ body {
 .main-button-yellow a {
   font-size: 13px;
   color: #fff;
-  background-color: #f5a425;
+  background-color: var(--primary-color);
   padding: 12px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -236,12 +244,12 @@ header
 }
 
 .sub-header .right-icons ul li a:hover {
-  color: #f5a425;
+  color: var(--primary-color);
 }
 
 .sub-header .left-content p em {
    font-style: normal;
-   color: #f5a425;
+   color: var(--primary-color);
 }
 
 .background-header {
@@ -351,12 +359,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: var(--primary-color)!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: var(--primary-color)!important;
   opacity: 1;
 }
 
@@ -455,12 +463,6 @@ header
 
 
 
-.header-area .main-nav .nav li.has-sub ul.sub-menu li {
-  margin-left: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
   opacity: 1;
   display: block;
@@ -484,14 +486,28 @@ header
   transition: all 0.3s ease 0s;
   position: relative;
   font-size: 12px;
-  font-weight: 600;
-  border-bottom: 1px solid #626262;
+  @media screen and (min-width: 768px) {
+    font-weight: 1000;
+  }
+  @media screen and (max-width: 767px) {
+    font-weight: 700;
+  }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 
+.header-area .main-nav .nav li.has-sub ul.sub-menu li {
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  background: rgba(255, 255, 255, 0.3); /* CHANGED OPACITY */
-  color: #f5a425!important;
+  background: rgba(255, 255, 255, 0.4); /* CHANGED OPACITY */
+  color: var(--primary-color)!important;
   padding-left: 25px;
 }
 
@@ -506,6 +522,10 @@ header
   z-index: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
+  
+  @media screen and (max-width: 767px)  {
+    overflow-y: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -648,7 +668,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #f5a425;
+  color: var(--primary-color);
 }
 
 @media (max-width: 1200px) {
@@ -667,7 +687,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #f5a425!important;
+    color: var(--primary-color)!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -716,8 +736,10 @@ header
     padding-right: 0 !important;
   }
   .header-area .main-nav .nav li a {
-    height: 50px !important;
-    line-height: 50px !important;
+    height: 50px;
+    line-height: 50px;
+    white-space: normal;
+    text-wrap: normal;
     padding: 0 !important;
     border: none !important;
     background: #f7f7f7 !important;
@@ -725,7 +747,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #f5a425!important;
+    color: var(--primary-color)!important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -831,7 +853,7 @@ banner
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: #f5a425;
+  color: var(--primary-color);
   font-weight: 900;
 }
 
@@ -1174,7 +1196,7 @@ section.apply-now .item p {
   transition: transform 200ms ease-in-out;
 }
 .accordion-head.is-open {
-  color: #f5a425;
+  color: var(--primary-color);
   border-bottom: none;
 }
 .accordion-head.is-open .icon {
@@ -1230,7 +1252,7 @@ section.our-courses {
 }
 
 .our-courses .item .down-content .info ul li i {
-  color: #f5a425;
+  color: var(--primary-color);
   font-size: 14px;
 }
 
@@ -1379,7 +1401,7 @@ section.our-facts h2 {
 
 .count-digit {
     margin: 5px 0;
-    color: #f5a425;
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 36px;
 }
@@ -1536,7 +1558,7 @@ section.contact-us .right-info ul li span {
 }
 
 .footer p a {
-  color: #f5a425;
+  color: var(--primary-color);
 }
 
 
@@ -1768,7 +1790,7 @@ section.meetings-page .pagination ul li a:hover {
 }
 
 .meeting-single-item .down-content .share ul li a:hover {
-  color: #f5a425;
+  color: var(--primary-color);
 }
 
 /* Meeting item column */
@@ -1903,7 +1925,30 @@ responsive
 }
 
 @media (max-width: 767px) {
+  
+  .has-sub .sub-menu  {
+    max-height: 280px; /* Set the desired maximum height for the dropdown menu */
+    overflow-y: visible; /* Enable vertical scrollbar if the content overflows */
+  }
 
+  .main-menu .has-sub .sub-menu a {
+    font-weight: 100;
+  }
+  
+  .sub-menu::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .sub-menu::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+
+  .sub-menu::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  /*CHANGED UP*/
+  
   .sub-header .left-content p {
     display: none;
   }
