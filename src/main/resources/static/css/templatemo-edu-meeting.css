@@ -480,7 +480,7 @@ header
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
   opacity: 1;
   display: block;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.3);
   @media screen and (max-width: 767px) {
     color: #2a2a2a!important;
   }
@@ -922,14 +922,27 @@ services
 }
 
 .services .item {
-  background-image: url(../images/service-item-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
   border-radius: 20px;
   text-align: center;
   color: #fff;
   padding: 40px;
+}
+
+.services .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/service-item-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(40%);
+  border-radius: 20px;
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
 }
 
 .services .item .icon {
@@ -941,12 +954,13 @@ services
   margin-top: 25px;
   margin-bottom: 15px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .services .item p {
   color: #fff;
   font-size: 13px;
+  font-weight: 800;
 }
 
 .services .owl-nav {
