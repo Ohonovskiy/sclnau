@@ -171,7 +171,7 @@ body {
   padding: 12px 30px;
   display: inline-block;
   border-radius: 22px;
-  font-weight: 500;
+  font-weight: 800;
   text-transform: uppercase;
   transition: all .3s;
 }
@@ -309,6 +309,11 @@ header
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.header-area .main-nav .logo:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease 0s;;
 }
 
 .background-header .main-nav .logo {
@@ -1220,6 +1225,16 @@ section.apply-now .item p {
   transition: color 200ms ease-in-out;
   border-bottom: 1px solid #fff;
 }
+
+.accordion div span:first-child {
+  font-weight: 800;
+  padding: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+
 @media screen and (min-width: 768px) {
   .accordion-head {
     padding: 1rem;
@@ -1245,6 +1260,10 @@ section.apply-now .item p {
 }
 .accordion-body > .content {
   padding: 0 20px 20px;
+}
+
+.accordion-body p {
+  font-weight: 600;
 }
 
 
