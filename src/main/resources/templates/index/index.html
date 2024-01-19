@@ -50,7 +50,7 @@ https://templatemo.com/tm-569-edu-meeting
                         <li class="has-sub main-menu">
                           <a href="javascript:void(0)" class="non-clickable">Про нас</a>
                           <ul class="sub-menu">
-                            <li><a href="/pro-nas/news.html">Новини</a></li>
+                            <li><a th:href="@{/about-us/news}">Новини</a></li>
                             <li><a href="/pro-nas/struktura.html">Структура</a></li>
                             <li class="has-sub">
                               <a href="javascript:void(0)" class="non-clickable">Відділення</a>
@@ -307,23 +307,26 @@ https://templatemo.com/tm-569-edu-meeting
             <h2>Останні новини</h2>
           </div>
         </div>
-        <div class="col-lg-4"> <!-- Adjusted to col-lg-4 for three items in a row -->
-          <div class="meeting-item">
-            <div class="thumb">
-              <div class="price">
-                <span>$22.00</span>
+
+
+        <div th:each="news : ${latestNews}">
+          <div class="col-lg-4"> <!-- Adjusted to col-lg-4 for three items in a row -->
+            <div class="meeting-item">
+              <div class="thumb">
+                <a th:href="@{/about-us/news/{id}(id=${news.getId()})}"><img src="/news-photos/img.png" th:alt="${news.getCaption()}"></a>
               </div>
-              <a href="meeting-details.html"><img src="/images/meeting-01.jpg" alt="New Lecturer Meeting"></a>
-            </div>
-            <div class="down-content">
-              <div class="date">
-                <h6>Nov <span>10</span></h6>
+              <div class="down-content">
+                <div class="date">
+                  <h6 th:text="${#dates.format(news.getCreationDate(), 'MMM')}"></h6>
+                  <span th:text="${#dates.format(news.getCreationDate(), 'dd')}"></span>
+                </div>
+                <a th:href="@{/about-us/news/{id}(id=${news.getId()})}"><h4 th:text="${news.getCaption()}"></h4></a>
+                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
               </div>
-              <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
-              <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
             </div>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="meeting-item">
             <div class="thumb">
