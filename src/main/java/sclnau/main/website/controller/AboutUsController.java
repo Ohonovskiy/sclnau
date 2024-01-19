@@ -24,7 +24,7 @@ public class AboutUsController {
         return "about-us/news";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/news/{id}")
     public String newsDetails(@PathVariable("id") Long id, Model model){
         News news = newsService.getById(id);
         news.addView();

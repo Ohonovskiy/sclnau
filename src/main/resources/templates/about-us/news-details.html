@@ -12,14 +12,14 @@
     <title>Education Template - Meeting Detail Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="/css/owl.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 <!--
 
 TemplateMo 569 Edu Meeting
@@ -31,31 +31,6 @@ https://templatemo.com/tm-569-edu-meeting
 
 <body>
 
-   
-
-  <!-- Sub Header -->
-  <div class="sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-sm-8">
-          <div class="left-content">
-            <p>This is an educational <em>HTML CSS</em> template by TemplateMo website.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4">
-          <div class="right-icons">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
       <div class="container">
@@ -63,25 +38,169 @@ https://templatemo.com/tm-569-edu-meeting
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          Edu Meeting
+                      <a href="/" class="logo">
+                          SFKLNUP
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li><a href="index.html">Home</a></li>
-                          <li><a href="news.html" class="active">Meetings</a></li>
-                          <li><a href="index.html">Apply Now</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)">Pages</a>
+                          <li class="scroll-to-section"><a th:href="@{/}">Головна</a></li>
+
+                          <li class="has-sub main-menu">
+                              <a href="javascript:void(0)" class="non-clickable">Про нас</a>
                               <ul class="sub-menu">
-                                  <li><a href="news.html">Upcoming Meetings</a></li>
-                                  <li><a href="news-details.html">Meeting Details</a></li>
+                                  <li><a th:href="@{/about-us/news}">Новини</a></li>
+                                  <li><a href="/pro-nas/struktura.html">Структура</a></li>
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Відділення</a>
+                                      <ul class="sub-menu">
+                                          <li class="has-sub">
+                                              <a href="/pro-nas/struktura/viddilennia/viddilennia-mekhaniky-ta-enerhetyky.html" class="non-clickable">Відділення механіки та енергетики</a>
+                                              <ul class="sub-menu">
+                                                  <li><a href="/pro-nas/struktura/viddilennia/viddilennia-mekhaniky-ta-enerhetyky/dokumenty.html">Документи</a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="has-sub">
+                                              <a href="/pro-nas/struktura/viddilennia/viddilennia-budivnytstva-heodezii-ta-kompiuternykh-nauk.html" class="non-clickable">Відділення будівництва, геодезії та комп’ютерних наук</a>
+                                              <ul class="sub-menu">
+                                                  <li><a href="/pro-nas/struktura/viddilennia/viddilennia-budivnytstva-heodezii-ta-kompiuternykh-nauk/dokumenty.html">Документи</a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="has-sub">
+                                              <a href="/pro-nas/struktura/viddilennia/viddilennia-ekonomiky-prava-i-turyzmu.html" class="non-clickable">Відділення економіки, права і туризму</a>
+                                              <ul class="sub-menu">
+                                                  <li><a href="/pro-nas/struktura/viddilennia/viddilennia-ekonomiky-prava-i-turyzmu/dokumenty.html">Документи</a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="/pro-nas/struktura/tsyklovi-komisii.html">Циклові комісії</a></li>
+                                  <li><a href="/pro-nas/litsenzovanyi-obsiah.html">Ліцензований обсяг</a></li>
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Публічна інформація</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/pro-nas/publichna-informatsiia/dostup-do-publichnoi-informatsii.html">Доступ до публічної інформації</a></li>
+                                          <li class="has-sub">
+                                              <a href="javascript:void(0)" class="non-clickable">Ліцензії та сертифікати</a>
+                                              <ul class="sub-menu">
+                                                  <li><a href="/pro-nas/publichna-informatsiia/litsenzii-ta-sertyfikaty/litsenzii.html">Ліцензії</a></li>
+                                                  <li><a href="/pro-nas/publichna-informatsiia/litsenzii-ta-sertyfikaty/sertyfikaty.html">Сертифікати</a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="has-sub">
+                                              <a href="javascript:void(0)" class="non-clickable">Нормативні документи</a>
+                                              <ul class="sub-menu">
+                                                  <li><a href="/pro-nas/publichna-informatsiia/normatyvni-dokumenty/zahalni.html">Загальні</a></li>
+                                                  <li><a href="/pro-nas/publichna-informatsiia/normatyvni-dokumenty/osvitnii-protses.html">Освітній процес</a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="has-sub">
+                                              <a href="javascript:void(0)" class="non-clickable">Фінансова діяльність</a>
+                                              <ul class="sub-menu">
+                                                  <li><a href="/pro-nas/publichna-informatsiia/finansova-diialnist/platni-posluhy.html">Платні послуги</a></li>
+                                                  <li><a href="/pro-nas/publichna-informatsiia/finansova-diialnist/zvitnist.html">Звітність</a></li>
+                                                  <li><a href="/pro-nas/publichna-informatsiia/finansova-diialnist/platizhni-rekvizyty.html">Платіжні реквізити</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/pro-nas/publichna-informatsiia/zvity-pro-diialnist.html">Звіти про діяльність</a></li>
+                                          <li><a href="/pro-nas/publichna-informatsiia/kadrovij-sklad.html">Кадровий склад</a></li>
+                                          <li><a href="/pro-nas/publichna-informatsiia/vakansii.html">Вакансії</a></li>
+                                          <li><a href="/pro-nas/publichna-informatsiia/umovy-dostupnosti-zakladu-osvity.html">Умови доступності закладу освіти</a></li>
+                                          <li><a href="/pro-nas/publichna-informatsiia/vybory-dyrektora.html">Вибори директора</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="/pro-nas/monitorynh.html">Моніторинг</a></li>
+                                  <li><a href="/pro-nas/profspilkovyi-komitet.html">Профспілковий комітет</a></li>
+                                  <li><a href="/pro-nas/materialno-tekhnichna-baza.html">Матеріально-технічна база</a></li>
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Бібліотека</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/pro-nas/biblioteka/zahalna-informatsiia.html">Загальна інформація</a></li>
+                                          <li><a href="/pro-nas/biblioteka/novi-nadkhodzhennia.html">Нові надходження</a></li>
+                                          <li><a href="/pro-nas/biblioteka/periodychni-vydannia.html">Періодичні видання</a></li>
+                                          <li><a href="https://elib.sclnau.com.ua" rel="noopener noreferrer" target="_blank">Електронна бібліотека</a></li>
+                                          <li><a href="/pro-nas/biblioteka/korysni-posylannia.html">Корисні посилання</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="/pro-nas/mova-osvitnoho-protsesu.html">Мова освітнього процесу</a></li>
+                                  <li><a href="/pro-nas/fotohalereia.html">Фотогалерея</a></li>
+                                  <li><a href="/pro-nas/vikhy-istorii.html">Віхи історії</a></li>
+                                  <li><a href="/pro-nas/mizhnarodni-zviazky.html">Міжнародні зв'язки</a></li>
+                                  <li><a href="/pro-nas/kontakty.html">Контакти</a></li>
                               </ul>
                           </li>
-                          <li><a href="index.html">Courses</a></li> 
-                          <li><a href="index.html">Contact Us</a></li> 
-                      </ul>        
+
+                          <!--                        START OF PROCESS            -->
+                          <li class="has-sub main-menu">
+                              <a href="javascript:void(0)" class="non-clickable">Освітній процес</a>
+                              <ul class="sub-menu">
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Забезпечення якості освіти</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/osvitnii-protses/zabezpechennia-iakosti-osvity/vnutrishnia-systema-zabezpechennia-iakosti-osvity.html">Внутрішня система забезпечення якості освіти</a></li>
+                                          <li><a href="/osvitnii-protses/zabezpechennia-iakosti-osvity/normatyvni-dokumenty.html">Нормативні документи</a></li>
+                                          <li><a href="/osvitnii-protses/zabezpechennia-iakosti-osvity/rada-z-iakosti-osvity.html">Рада з якості освіти</a></li>
+                                          <li><a href="/osvitnii-protses/zabezpechennia-iakosti-osvity/akademichna-dobrochesnist.html">Академічна доброчесність</a></li>
+                                          <li><a href="/osvitnii-protses/zabezpechennia-iakosti-osvity/antykoruptsiina-dilnist.html">Антикорупційна дільність</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="/osvitnii-protses/osvitni-prohramy.html">Освітні програми</a></li>
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Формування індивідуальної освітньої траєкторії</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/osvitnii-protses/formuvannia-indyvidualnoi-osvitnoi-traiektorii/sylabusy-dystsyplin.html">Силабуси дисциплін</a></li>
+                                          <li><a href="/osvitnii-protses/formuvannia-indyvidualnoi-osvitnoi-traiektorii/vybirkovi-dystsypliny.html">Вибіркові дисципліни</a></li>
+                                          <li><a href="/osvitnii-protses/formuvannia-indyvidualnoi-osvitnoi-traiektorii/etapy-vyboru-dystsyplin.html">Етапи вибору дисциплін</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="/osvitnii-protses/neformalna-informalna-osvita.html">Неформальна/інформальна освіта</a></li>
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Практична підготовка</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/osvitnii-protses/praktychne-navchannia/profesiino-tekhnichne-navchannia.html">Професійно-технічне навчання</a></li>
+                                          <li><a href="/osvitnii-protses/praktychne-navchannia/navchalno-vyrobnycha-maisternia.html">Навчально-виробнича майстерня</a></li>
+                                          <!-- Add the rest of the items for "Практична підготовка" similarly -->
+                                      </ul>
+                                  </li>
+                                  <li><a href="/osvitnii-protses/pratsevlashtuvannia.html">Працевлаштування</a></li>
+                                  <li class="has-sub">
+                                      <a href="javascript:void(0)" class="non-clickable">Безпека освітнього середовища</a>
+                                      <ul class="sub-menu">
+                                          <li class="has-sub">
+                                              <a href="javascript:void(0)" class="non-clickable">Охорона праці та цивільний захист</a>
+                                              <ul class="sub-menu">
+                                                  <li class="has-sub">
+                                                      <a href="javascript:void(0)" class="non-clickable">Охорона праці</a>
+                                                      <ul class="sub-menu">
+                                                          <li><a href="/osvitnii-protses/bezpeka-osvitnoho-seredovyshcha/okhorona-pratsi/okhorona-pratsi/dokumenty.html">Документи</a></li>
+                                                          <li><a href="/osvitnii-protses/bezpeka-osvitnoho-seredovyshcha/okhorona-pratsi/okhorona-pratsi/prohramy.html">Програми</a></li>
+                                                          <li><a href="/osvitnii-protses/bezpeka-osvitnoho-seredovyshcha/okhorona-pratsi/okhorona-pratsi/instruktsii.html">Інструкції</a></li>
+                                                          <li><a href="/osvitnii-protses/bezpeka-osvitnoho-seredovyshcha/okhorona-pratsi/okhorona-pratsi/korysni-posylannia.html">Корисні посилання</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/osvitnii-protses/bezpeka-osvitnoho-seredovyshcha/bezpeka-v-interneti.html">Безпека в Інтернеті</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="https://edu.sclnau.com.ua" rel="noopener noreferrer" target="_blank">Система обліку відвідування аудиторних занять (СОВА)</a></li>
+                                  <li><a href="https://classroom.google.com" rel="noopener noreferrer" target="_blank">Дистанційне навчання</a></li>
+                              </ul>
+                          </li>
+
+                          <li class="has-sub main-menu">
+                              <a href="javascript:void(0)" class="non-clickable">Абітурієнту</a>
+                          </li>
+
+                          <li class="has-sub main-menu">
+                              <a href="javascript:void(0)" class="non-clickable">Студенту</a>
+                          </li>
+
+                          <li class="has-sub main-menu">
+                              <a href="javascript:void(0)" class="non-clickable">Викладачу</a>
+                          </li>
+
+                      </ul>
                       <a class='menu-trigger'>
                           <span>Menu</span>
                       </a>
@@ -97,8 +216,8 @@ https://templatemo.com/tm-569-edu-meeting
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h6>Get all details</h6>
-          <h2>Online Teaching and Learning Tools</h2>
+          <h6>Більше про</h6>
+          <h2 th:text="${news.getCaption()}"></h2>
         </div>
       </div>
     </div>
@@ -112,22 +231,16 @@ https://templatemo.com/tm-569-edu-meeting
             <div class="col-lg-12">
               <div class="meeting-single-item">
                 <div class="thumb">
-                  <div class="price">
-                    <span>$14.00</span>
-                  </div>
-                  <div class="date">
-                    <h6>Nov <span>12</span></h6>
-                  </div>
-                  <a href="news-details.html"><img src="assets/images/single-meeting.jpg" alt=""></a>
+                    <div class="date">
+                        <h6 th:text="${#dates.format(news.getCreationDate(), 'MMM')}"></h6>
+                        <span th:text="${#dates.format(news.getCreationDate(), 'dd')}"></span>
+                    </div>
+                  <a href="news-details.html"><img th:src="${news.getPhotos().get(0).getPath()}" alt=""></a>
                 </div>
                 <div class="down-content">
-                  <a href="news-details.html"><h4>Online Teaching and Learning Tools</h4></a>
+                  <a><h4 th:text="${news.getCaption()}"></h4></a>
                   <p>Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                  <p class="description">
-                    This is an edu meeting HTML CSS template provided by <a href="https://templatemo.com/" target="_blank" rel="nofollow">TemplateMo website</a>. This is a Bootstrap v5.1.3 layout. If you need more free website templates like this one, please visit our website TemplateMo. Please tell your friends about our website. Thank you. If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.
-                    
-                    <br><br>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout. You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.
-                  </p>
+                  <p class="description" th:text="${news.getBodyText()}"></p>
                   <div class="row">
                     <div class="col-lg-4">
                       <div class="hours">
@@ -164,8 +277,8 @@ https://templatemo.com/tm-569-edu-meeting
               </div>
             </div>
             <div class="col-lg-12">
-              <div class="main-button-red">
-                <a href="news.html">Back To Meetings List</a>
+              <div class="main-button-green">
+                <a th:href="@{/about-us/news}">Назад до новин</a>
               </div>
             </div>
           </div>
@@ -185,16 +298,16 @@ https://templatemo.com/tm-569-edu-meeting
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/video.js"></script>
-    <script src="assets/js/slick-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="/js/isotope.min.js"></script>
+    <script src="/js/owl-carousel.js"></script>
+    <script src="/js/lightbox.js"></script>
+    <script src="/js/tabs.js"></script>
+    <script src="/js/video.js"></script>
+    <script src="/js/slick-slider.js"></script>
+    <script src="/js/custom.js"></script>
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');

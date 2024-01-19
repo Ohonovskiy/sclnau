@@ -19,6 +19,7 @@ public class News {
 
     private String caption;
     private String bodyText;
+    private String shortDesc;
     private Long views = 0L;
     private Timestamp creationDate = new Timestamp(System.currentTimeMillis());
 

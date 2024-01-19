@@ -1104,6 +1104,11 @@ section.upcoming-meetings .categories .main-button-green a {
   margin-bottom: 30px;
 }
 
+.meeting-item:hover {
+  filter: brightness(110%);
+  transition: 0.3s;
+}
+
 .meeting-item .thumb {
   position: relative;
 }
@@ -1145,7 +1150,7 @@ section.upcoming-meetings .categories .main-button-green a {
 .meeting-item .down-content .date h6 {
   font-size: 13px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
   color: #a12c2f;
 }
 
@@ -1154,6 +1159,7 @@ section.upcoming-meetings .categories .main-button-green a {
   color: #1f272b;
   font-size: 22px;
   margin-top: 7px;
+  font-weight: 700;
 }
 
 .meeting-item .down-content h4 {
