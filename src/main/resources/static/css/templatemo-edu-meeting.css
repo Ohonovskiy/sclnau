@@ -695,7 +695,7 @@ header
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
@@ -808,12 +808,6 @@ header
   }
   .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
     height: 0;
-  }
-}
-
-@media (min-width: 767px) {
-  .header-area .main-nav .nav {
-    display: flex !important;
   }
 }
 
@@ -1479,6 +1473,26 @@ section.our-facts .video img {
 contact us
 --------------------------------------------- 
 */
+
+.map {
+  @media screen and (min-width: 768px) {
+    min-width: 650px;
+    min-height: 260px;
+    position: relative;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 80%;
+    width: 80%;
+  }
+
+}
+
+.map iframe {
+  border: 1px solid black;
+  height: 100%;   /* Make sure the iframe takes 100% height of the parent div */
+  width: 100%;    /* Make sure the iframe takes 100% width of the parent div */
+}
 
 section.contact-us {
   background-image: url(../images/meetings-bg.jpg);
