@@ -20,7 +20,8 @@ public class AboutUsController {
     }
 
     @GetMapping("/news")
-    public String news(){
+    public String news(Model model){
+        model.addAttribute("allNews", newsService.getAll());
         return "about-us/news";
     }
 

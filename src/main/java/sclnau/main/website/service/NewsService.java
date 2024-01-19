@@ -19,6 +19,9 @@ public class NewsService {
     public News getById(Long id){
         return newsRepo.getReferenceById(id);
     }
+    public List<News> getAll(){
+        return newsRepo.findAll();
+    }
 
     public void save(News news){
         newsRepo.save(news);
