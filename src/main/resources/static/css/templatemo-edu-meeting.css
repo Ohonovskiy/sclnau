@@ -1650,9 +1650,7 @@ heading page
 */
 
 section.heading-page {
-  background-image: url(../images/heading-bg.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../images/heading-bg.jpg) no-repeat fixed center center;
   background-size: cover;
   padding-top: 230px;
   padding-bottom: 110px;
@@ -1796,7 +1794,7 @@ section.meetings-page .pagination ul li a:hover {
   position: absolute;
   background-color: rgba(250,250,250,0.9);
   width: 80px;
-  height: 80px;
+  height: 120px;
   text-align: center;
   padding: 15px 0;
   border-radius: 10px;
@@ -1865,9 +1863,9 @@ section.meetings-page .pagination ul li a:hover {
 }
 
 .meeting-single-item .down-content .share ul li a {
-  font-size: 14px;
   color: #1f272b;
   transition: all .3s;
+  font-weight: 500;
 }
 
 .meeting-single-item .down-content .share ul li a:hover {

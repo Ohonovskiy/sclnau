@@ -20,7 +20,7 @@ public class NewsService {
         return newsRepo.getReferenceById(id);
     }
     public List<News> getAll(){
-        return newsRepo.findAll();
+        return newsRepo.findAllByOrderByCreationDateDesc();
     }
 
     public void save(News news){

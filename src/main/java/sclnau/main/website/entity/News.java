@@ -20,11 +20,12 @@ public class News {
     private String caption;
     private String bodyText;
     private String shortDesc;
+    private String location;
     private Long views = 0L;
     private Timestamp creationDate = new Timestamp(System.currentTimeMillis());
 
-    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "news")
-    private List<Photo> photos = new ArrayList<>();
+    @OneToOne(cascade = CascadeType.REMOVE, mappedBy = "news")
+    private Photo photo;
 
     public void addView(){
         this.views++;

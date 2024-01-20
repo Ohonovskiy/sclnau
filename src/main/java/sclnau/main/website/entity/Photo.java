@@ -14,6 +14,6 @@ public class Photo {
     private Long id;
     private String path;
 
-    @ManyToOne
+    @OneToOne
     private News news;
 }

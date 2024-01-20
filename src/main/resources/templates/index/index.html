@@ -839,7 +839,7 @@ https://templatemo.com/tm-569-edu-meeting
       $(document).ready(function () {
         $('.header-area .main-nav .nav').on('click', 'li.has-sub > a', function (event) {
           event.preventDefault();
-          var $parentLi = $(this).parent('li.has-sub');
+          const $parentLi = $(this).parent('li.has-sub');
           $parentLi.toggleClass('active').siblings().removeClass('active');
         });
       });

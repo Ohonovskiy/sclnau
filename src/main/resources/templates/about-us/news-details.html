@@ -9,7 +9,8 @@
     <meta name="author" content="Template Mo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Education Template - Meeting Detail Page</title>
+    <title th:text="${news.getCaption() + ' - Новина ВСП &quot;CФК ЛНУП&quot;'}"></title>
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +32,6 @@ https://templatemo.com/tm-569-edu-meeting
 
 <body>
 
-<!--TODO LINKS IN HEADER NON-CLICKABLE-->
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
       <div class="container">
@@ -235,41 +235,31 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="date">
                         <h6 th:text="${#dates.format(news.getCreationDate(), 'MMM')}"></h6>
                         <span th:text="${#dates.format(news.getCreationDate(), 'dd')}"></span>
+                        <span th:text="${#dates.format(news.getCreationDate(), 'yyyy')}"></span>
                     </div>
-                  <a href="news-details.html"><img th:src="${news.getPhotos().get(0).getPath()}" alt=""></a>
+                  <img th:src="${news.getPhoto().getPath()}" alt="">
                 </div>
                 <div class="down-content">
                   <a><h4 th:text="${news.getCaption()}"></h4></a>
-                  <p>Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-008, Brazil</p>
                   <p class="description" th:text="${news.getBodyText()}"></p>
                   <div class="row">
                     <div class="col-lg-4">
                       <div class="hours">
-                        <h5>Hours</h5>
-                        <p>Monday - Friday: 07:00 AM - 13:00 PM<br>Saturday- Sunday: 09:00 AM - 15:00 PM</p>
+                        <h5 th:text="'Перегляди: ' + ${news.getViews()}"></h5>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="location">
-                        <h5>Location</h5>
-                        <p>Recreio dos Bandeirantes, 
-                        <br>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="book now">
-                        <h5>Book Now</h5>
-                        <p>010-020-0340<br>090-080-0760</p>
+                        <h5 th:text="'Розташування: ' + ${news.getLocation()}"></h5>
                       </div>
                     </div>
                     <div class="col-lg-12">
                       <div class="share">
-                        <h5>Share:</h5>
+                        <h5>Поділитись новиною:</h5>
                         <ul>
-                          <li><a href="#">Facebook</a>,</li>
-                          <li><a href="#">Twitter</a>,</li>
-                          <li><a href="#">Linkedin</a>,</li>
-                          <li><a href="#">Behance</a></li>
+                          <li><a th:href="@{'https://www.facebook.com/sharer/sharer.php?u=sclnau.com.ua/about-us/news/' + ${news.id}}">Facebook</a>,</li>
+                          <li><a th:href="@{'https://twitter.com/intent/tweet?url=sclnau.com.ua/about-us/news/' + ${news.id} + '&text=' + ${#uris.escapeQueryParam(news.getCaption())}}" target="_blank">Twitter</a>,</li>
+                          <li><a th:href="@{'https://www.linkedin.com/shareArticle?url=sclnau.com.ua/about-us/news/' + ${news.id} + '&title=' + ${#uris.escapeQueryParam(news.getCaption())}}" target="_blank">LinkedIn</a></li>
                         </ul>
                       </div>
                     </div>
@@ -309,55 +299,16 @@ https://templatemo.com/tm-569-edu-meeting
     <script src="/js/video.js"></script>
     <script src="/js/slick-slider.js"></script>
     <script src="/js/custom.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
-
-        var showSection = function showSection(section, isAnimate) {
-          var
-          direction = section.replace(/#/, ''),
-          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-          reqSectionPos = reqSection.offset().top - 0;
-
-          if (isAnimate) {
-            $('body, html').animate({
-              scrollTop: reqSectionPos },
-            800);
-          } else {
-            $('body, html').scrollTop(reqSectionPos);
-          }
-
-        };
-
-        var checkSection = function checkSection() {
-          $('.section').each(function () {
-            var
-            $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-              var
-              currentId = $this.data('section'),
-              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-              reqLink.closest('li').addClass('active').
-              siblings().removeClass('active');
-            }
-          });
-        };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
-
-        $(window).scroll(function () {
-          checkSection();
+        $(document).ready(function () {
+            $('.header-area .main-nav .nav').on('click', 'li.has-sub > a', function (event) {
+                event.preventDefault();
+                const $parentLi = $(this).parent('li.has-sub');
+                $parentLi.toggleClass('active').siblings().removeClass('active');
+            });
         });
     </script>
-</body>
-
-
   </body>
-
 </html>
