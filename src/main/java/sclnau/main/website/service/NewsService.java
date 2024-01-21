@@ -1,6 +1,8 @@
 package sclnau.main.website.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import sclnau.main.website.entity.News;
 import sclnau.main.website.repository.NewsRepo;
@@ -21,6 +23,10 @@ public class NewsService {
     }
     public List<News> getAll(){
         return newsRepo.findAllByOrderByCreationDateDesc();
+    }
+
+    public Page<News> getAll(Pageable pageable){
+        return newsRepo.findAllByOrderByCreationDateDesc(pageable);
     }
 
     public void save(News news){
