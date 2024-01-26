@@ -16,6 +16,10 @@ public class PhotoService {
         this.photoRepo = photoRepo;
     }
 
+    public void save(Photo photo){
+        photoRepo.save(photo);
+    }
+
     public Photo getById(Long id){
         return photoRepo.getReferenceById(id);
     }
