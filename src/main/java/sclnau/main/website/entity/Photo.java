@@ -23,6 +23,7 @@ public class Photo {
     @OneToOne
     private News news;
 
+    @Transient
     @Value("${upload.path}")
     String pathToUpload;
 
