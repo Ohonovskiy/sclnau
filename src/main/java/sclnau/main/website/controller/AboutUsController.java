@@ -46,6 +46,10 @@ public class AboutUsController {
         return "about-us/news-details";
     }
 
+    @GetMapping("/licenced-volume")
+    public String licencedVolume(){
+        return "about-us/licenced-volume";
+    }
 
 
 }

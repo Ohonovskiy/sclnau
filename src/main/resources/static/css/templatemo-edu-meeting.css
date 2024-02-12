@@ -37,6 +37,8 @@ reset
 
 :root {
   --primary-color: #53c25e;
+  --a-primary-color: rgba(92, 186, 60, 0.27);
+  --b-primary-color: #f8f6ff;
   --white: #ffffff;
 }
 
@@ -207,6 +209,73 @@ body {
   text-transform: uppercase;
   color: #fff;
 }
+
+/*
+---------------------------------------------
+table
+---------------------------------------------
+*/
+
+/* Styles for the table */
+.specialties-page {
+  padding-top: 5%;
+}
+.specialties-page .specialties-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+/* Styles for table headings */
+.specialties-page .specialties-table th,
+.specialties-page .specialties-table td {
+  padding: 16px 20px;
+}
+
+/* Styles for table heading cells */
+.specialties-page .specialties-table th {
+  background-color: var(--primary-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Styles for table data cells */
+.specialties-page .specialties-table td {
+  text-align: center;
+}
+
+/* Alternate row colors */
+.specialties-page .specialties-table tbody tr:nth-child(even) {
+  background-color: var(--a-primary-color);
+}
+
+.specialties-page .specialties-table tbody tr:nth-child(odd) {
+  background-color: var(--b-primary-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  /* Reduce padding for smaller screens */
+  .specialties-page .specialties-table th,
+  .specialties-page .specialties-table td {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Reduce font size for smaller screens */
+  .specialties-page .specialties-table th,
+  .specialties-page .specialties-table td {
+    font-size: 12px;
+  }
+}
+
+footer {
+  background-image: url(../images/meetings-bg.jpg);
+}
+
+
+
 
 
 /* 
@@ -1640,6 +1709,15 @@ section.contact-us .right-info ul li span {
 
 .footer p a {
   color: var(--primary-color);
+}
+
+section.custom-footer {
+  background-image: url(../images/meetings-bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 0 0 0;
 }
 
 
