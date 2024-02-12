@@ -51,5 +51,9 @@ public class AboutUsController {
         return "about-us/licenced-volume";
     }
 
+    @GetMapping("/public-info")
+    public String publicInfo(){
+        return "about-us/public-info";
+    }
 
 }

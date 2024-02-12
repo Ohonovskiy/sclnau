@@ -1108,6 +1108,65 @@ services
 
 /*
 ---------------------------------------------
+text page css
+---------------------------------------------
+*/
+
+@media screen and (max-width: 991px) {
+  .text-page .main-button-green {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.text-page address {
+  font-weight: 600;
+}
+
+.text-page .main-button-green {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.text-page {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.text-page h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.text-page p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.text-page ul {
+  list-style-type: none;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.text-page ul li::before {
+  content: "\2022"; /* Bullet point (•) */
+  color: #666;
+  font-size: 1.2em;
+  padding-right: 5px;
+}
+
+
+/*
+---------------------------------------------
 upcoming meetings
 ---------------------------------------------
 */
