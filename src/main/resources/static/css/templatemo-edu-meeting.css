@@ -1754,29 +1754,47 @@ section.contact-us .right-info ul li span {
   font-weight: 700;
 }
 
-.footer {
-  text-align: center;
-  margin-top: 140px;
-  border-top: 1px solid rgba(250,250,250,0.15);
-  padding: 50px 0;
-}
 .footer p {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #fff;
+  color: grey;
 }
 
-.footer p a {
+.footer h6, p:hover, a:hover {
   color: var(--primary-color);
+  transition: .3s;
 }
 
-section.custom-footer {
+section.footer {
   background-image: url(../images/meetings-bg.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 0 0 0;
+}
+
+
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-link {
+  color: #6c757d;
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 4px;
+  margin-right: 15px;
+}
+
+.social-icon-link:hover {
+  color: var(--primary-color);
 }
 
 
