@@ -61,4 +61,9 @@ public class AboutUsController {
         return "about-us/international-relations";
     }
 
+    @GetMapping("/historical-sequence")
+    public String historicalSequence(){
+        return "about-us/historical-sequence";
+    }
+
 }

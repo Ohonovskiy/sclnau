@@ -343,6 +343,81 @@ photo slider
   background-color: #717171;
 }
 
+/*
+---------------------------------------------
+history sequence
+---------------------------------------------
+*/
+
+.history-sequence {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+
+.history-sequence .timeline {
+  position: relative;
+  padding-left: 40px;
+}
+.history-sequence .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 4px;
+  height: 100%;
+  background-color: #333;
+}
+.history-sequence .event {
+  margin-bottom: 15%;
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.history-sequence .event .year {
+  flex: 0 0 auto;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 991px) {
+  .history-sequence .event img {
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .history-sequence .event img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+}
+
+
+.history-sequence .event .text {
+  flex: 1;
+}
+.history-sequence .event h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+}
+.history-sequence .event p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
 
 /* 
 ---------------------------------------------
