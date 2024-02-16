@@ -219,6 +219,7 @@ table
 /* Styles for the table */
 .specialties-page {
   padding-top: 5%;
+  padding-bottom: 5%;
 }
 .specialties-page .specialties-table {
   width: 100%;
@@ -275,7 +276,72 @@ footer {
 }
 
 
+/*
+---------------------------------------------
+photo slider
+---------------------------------------------
+*/
 
+
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
 
 
 /* 

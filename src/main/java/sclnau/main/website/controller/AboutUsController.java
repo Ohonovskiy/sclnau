@@ -56,4 +56,9 @@ public class AboutUsController {
         return "about-us/public-info";
     }
 
+    @GetMapping("/international-relations")
+    public String internationalRelations(){
+        return "about-us/international-relations";
+    }
+
 }
