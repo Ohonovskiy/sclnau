@@ -292,19 +292,19 @@ photo slider
 
 }
 
-.slider {
+.slider-container .slider {
   position: relative;
   display: flex;
   overflow: hidden;
 }
 
-.slider img {
+.slider-container .slider img {
   width: 100%;
   max-height: 600px;
   object-fit: cover;
 }
 
-.prev, .next {
+.slider-container .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -316,11 +316,11 @@ photo slider
   z-index: 1;
 }
 
-.prev {
+.slider-container .prev {
   left: 0;
 }
 
-.next {
+.slider-container .next {
   right: 0;
 }
 
@@ -329,7 +329,7 @@ photo slider
   margin-top: 10px;
 }
 
-.dot {
+.dots-container .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -339,7 +339,7 @@ photo slider
   cursor: pointer;
 }
 
-.active {
+.dots-container .active {
   background-color: #717171;
 }
 
