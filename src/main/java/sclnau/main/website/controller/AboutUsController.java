@@ -66,4 +66,9 @@ public class AboutUsController {
         return "about-us/historical-sequence";
     }
 
+    @GetMapping("/photo-gallery")
+    public String photoGallery(){
+        return "about-us/photo-gallery";
+    }
+
 }
