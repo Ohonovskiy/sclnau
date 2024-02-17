@@ -271,11 +271,6 @@ table
   }
 }
 
-footer {
-  background-image: url(../images/meetings-bg.jpg);
-}
-
-
 /*
 ---------------------------------------------
 photo slider
@@ -1869,7 +1864,7 @@ section.contact-us {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 0 0 0;
+  padding: 80px 0 80px 0;
 }
 
 section.contact-us #contact {
@@ -1985,7 +1980,8 @@ section.footer {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 0 0 0;
+  padding: 7px 0 0 0;
+  border-top: 1px solid #eee;
 }
 
 
