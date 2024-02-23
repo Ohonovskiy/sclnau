@@ -236,32 +236,9 @@
 </section>
 
 <section class="photo-gallery">
-    <img src="/images/photo-gallery/img_23.png" alt="Image 23" onclick="openModal('/images/photo-gallery/img_23.png')">
-    <img src="/images/photo-gallery/img_22.png" alt="Image 22" onclick="openModal('/images/photo-gallery/img_22.png')">
-    <img src="/images/photo-gallery/img_21.png" alt="Image 21" onclick="openModal('/images/photo-gallery/img_21.png')">
-    <img src="/images/photo-gallery/img_20.png" alt="Image 20" onclick="openModal('/images/photo-gallery/img_20.png')">
-    <img src="/images/photo-gallery/img_19.png" alt="Image 19" onclick="openModal('/images/photo-gallery/img_19.png')">
-    <img src="/images/photo-gallery/img_18.png" alt="Image 18" onclick="openModal('/images/photo-gallery/img_18.png')">
-    <img src="/images/photo-gallery/img_17.png" alt="Image 17" onclick="openModal('/images/photo-gallery/img_17.png')">
-    <img src="/images/photo-gallery/img_16.png" alt="Image 16" onclick="openModal('/images/photo-gallery/img_16.png')">
-    <img src="/images/photo-gallery/img_15.png" alt="Image 15" onclick="openModal('/images/photo-gallery/img_15.png')">
-    <img src="/images/photo-gallery/img_14.png" alt="Image 14" onclick="openModal('/images/photo-gallery/img_14.png')">
-    <img src="/images/photo-gallery/img_13.png" alt="Image 13" onclick="openModal('/images/photo-gallery/img_13.png')">
-    <img src="/images/photo-gallery/img_12.png" alt="Image 12" onclick="openModal('/images/photo-gallery/img_12.png')">
-    <img src="/images/photo-gallery/img_11.png" alt="Image 11" onclick="openModal('/images/photo-gallery/img_11.png')">
-    <img src="/images/photo-gallery/img_10.png" alt="Image 10" onclick="openModal('/images/photo-gallery/img_10.png')">
-    <img src="/images/photo-gallery/img_9.png" alt="Image 9" onclick="openModal('/images/photo-gallery/img_9.png')">
-    <img src="/images/photo-gallery/img_8.png" alt="Image 8" onclick="openModal('/images/photo-gallery/img_8.png')">
-    <img src="/images/photo-gallery/img_7.png" alt="Image 7" onclick="openModal('/images/photo-gallery/img_7.png')">
-    <img src="/images/photo-gallery/img_6.png" alt="Image 6" onclick="openModal('/images/photo-gallery/img_6.png')">
-    <img src="/images/photo-gallery/img_5.png" alt="Image 5" onclick="openModal('/images/photo-gallery/img_5.png')">
-    <img src="/images/photo-gallery/img_4.png" alt="Image 4" onclick="openModal('/images/photo-gallery/img_4.png')">
-    <img src="/images/photo-gallery/img_3.png" alt="Image 3" onclick="openModal('/images/photo-gallery/img_3.png')">
-    <img src="/images/photo-gallery/img_2.png" alt="Image 2" onclick="openModal('/images/photo-gallery/img_2.png')">
-    <img src="/images/photo-gallery/img_1.png" alt="Image 1" onclick="openModal('/images/photo-gallery/img_1.png')">
-    <img src="/images/photo-gallery/img.png" alt="Image 0" onclick="openModal('/images/photo-gallery/img.png')">
-
-
+    <div th:each="photo : ${photos}">
+        <img th:src="${photo.getImagePath()}" th:alt="Image" th:data-image-path="${photo.getImagePath()}" onclick="openModal(this.getAttribute('data-image-path'))">
+    </div>
 </section>
 
 <div id="myModal" class="modal">
