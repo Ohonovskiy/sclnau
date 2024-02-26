@@ -13,5 +13,5 @@ public class GalleryPhoto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
     private Long id;
-    private String imagePath;
+    private String fileName;
 }

@@ -1,5 +1,6 @@
 package sclnau.main.website.controller;
 
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/admin")
@@ -80,11 +82,12 @@ public class AdminController {
             Files.createDirectories(directoryPath);
         }
 
-        Path path = Paths.get(galleryPath  + file.getOriginalFilename());
+        String filename = UUID.randomUUID() + "." + file.getOriginalFilename().split("\\.")[1];
+        Path path = Paths.get(galleryPath  + filename);
         Files.write(path, bytes);
 
         GalleryPhoto galleryPhoto = new GalleryPhoto();
-        galleryPhoto.setImagePath(path.toString().substring(path.toString().indexOf("/images")));
+        galleryPhoto.setFileName(filename);
 
         galleryPhotoService.save(galleryPhoto);
 

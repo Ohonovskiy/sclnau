@@ -236,9 +236,7 @@
 </section>
 
 <section class="photo-gallery">
-    <div th:each="photo : ${photos}">
-        <img th:src="${photo.getImagePath()}" th:alt="Image" th:data-image-path="${photo.getImagePath()}" onclick="openModal(this.getAttribute('data-image-path'))">
-    </div>
+        <img th:each="photo : ${photos}" th:src="${'/gallery/'+photo.getFileName()}" th:alt="Image" th:data-image-path="${'/gallery/'+photo.getFileName()}" onclick="openModal(this.getAttribute('data-image-path'))">
 </section>
 
 <div id="myModal" class="modal">

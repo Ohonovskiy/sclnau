@@ -32,6 +32,6 @@ public class GalleryPhotoService {
     }
 
     public List<GalleryPhoto> getAll(){
-        return galleryPhotoRepo.findAllByOrderByIdAsc();
+        return galleryPhotoRepo.findAllByOrderByIdDesc();
     }
 }
