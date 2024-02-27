@@ -26,6 +26,7 @@ public class SpringConfig {
                         auth
                                 .anyRequest().permitAll())
                 .csrf(AbstractHttpConfigurer::disable)
+                .headers(AbstractHttpConfigurer::disable)
                 .sessionManagement(ses ->
                         ses.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                                 .sessionFixation().migrateSession()

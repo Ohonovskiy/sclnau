@@ -1097,7 +1097,6 @@ header
 }
 
 
-
 /* 
 ---------------------------------------------
 banner
@@ -2042,6 +2041,27 @@ section.heading-page h2 {
   color: #fff;
   letter-spacing: 1px;
 }
+/*
+---------------------------------------------
+PDF Page
+---------------------------------------------
+*/
+
+section.pdf-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0; /* Padding for top and bottom */
+}
+
+section.pdf-page iframe {
+  width: 80%; /* Set the width */
+  height: 200px; /* Set the height */
+  border: #0a53be 3px solid;
+}
+
+
+
 
 
 /*

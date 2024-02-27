@@ -65,6 +65,16 @@ public class AboutUsController {
         return "about-us/public-info";
     }
 
+    @GetMapping("/public-info/license")
+    public String publicInfoLicence(){
+        return "about-us/license";
+    }
+
+    @GetMapping("/public-info/certificates")
+    public String publicInfoCertifications(){
+        return "about-us/certificates";
+    }
+
     @GetMapping("/international-relations")
     public String internationalRelations(){
         return "about-us/international-relations";
