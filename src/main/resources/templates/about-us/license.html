@@ -16,15 +16,12 @@
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf_viewer.min.css"></script>
-
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="/css/fontawesome.css">
     <link rel="stylesheet" href="/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="/css/owl.css">
     <link rel="stylesheet" href="/css/lightbox.css">
-
 </head>
 
 <body>
@@ -237,9 +234,9 @@
     </div>
 </section>
 
-<section class="pdf-page header-text">
-    <canvas id="pdf-canvas"></canvas>
-</section>
+
+
+
 
 <section class="footer">
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -336,43 +333,6 @@
             const $parentLi = $(this).parent('li.has-sub');
             $parentLi.toggleClass('active').siblings().removeClass('active');
         });
-    });
-</script>
-
-<script>
-    const canvas = document.getElementById('pdf-canvas');
-
-    // Get the PDF file URL.
-    const pdfUrl = '/documents/licences/VL1.pdf';
-
-    pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.js';
-
-    // Load the PDF file using PDF.js.
-    pdfjsLib.getDocument(pdfUrl).promise.then(function (pdfDoc) {
-        // Get the first page of the PDF file.
-        pdfDoc
-            .getPage(1)
-            .then(function (page) {
-                const viewport = page.getViewport({ scale: 1 });
-
-                // Set the canvas dimensions to match the PDF page size.
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-
-                // Set the canvas rendering context.
-                const ctx = canvas.getContext('2d');
-
-                const renderContext = {
-                    canvasContext: ctx,
-                    viewport: viewport,
-                };
-
-                // Render the PDF page to the canvas.
-                page.render(renderContext);
-            })
-            .then(function () {
-                console.log('Rendering complete');
-            });
     });
 </script>
 
