@@ -1347,12 +1347,30 @@ text page css
 }
 
 .text-page h2 {
-  font-size: 24px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
   margin-bottom: 20px;
   margin-top: 20px;
-  font-weight: 700;
+  font-weight: 750;
   color: #333;
   text-align: center;
+  position: relative; /* Ensure relative positioning for the underline */
+}
+
+.text-page h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 60%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
 }
 
 .text-page p {
@@ -1372,6 +1390,20 @@ text page css
   color: #666;
   font-size: 1.2em;
   padding-right: 5px;
+}
+
+.text-page iframe {
+  display: block;
+  margin: 60px auto 0;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+  height: 400px;
 }
 
 
@@ -2041,28 +2073,6 @@ section.heading-page h2 {
   color: #fff;
   letter-spacing: 1px;
 }
-/*
----------------------------------------------
-PDF Page
----------------------------------------------
-*/
-
-section.pdf-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0; /* Padding for top and bottom */
-}
-
-section.pdf-page iframe {
-  width: 80%; /* Set the width */
-  height: 200px; /* Set the height */
-  border: #0a53be 3px solid;
-}
-
-
-
-
 
 /*
 ---------------------------------------------
