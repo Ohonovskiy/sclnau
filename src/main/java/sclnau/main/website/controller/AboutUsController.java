@@ -1,7 +1,6 @@
 package sclnau.main.website.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -10,12 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import sclnau.main.website.entity.GalleryPhoto;
 import sclnau.main.website.entity.News;
 import sclnau.main.website.service.GalleryPhotoService;
 import sclnau.main.website.service.NewsService;
 
-import java.io.IOException;
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -65,13 +64,27 @@ public class AboutUsController {
         return "about-us/public-info";
     }
 
-    @GetMapping("/public-info/license")
+    @GetMapping("/public-info/licences")
     public String publicInfoLicence(){
-        return "about-us/license";
+        return "about-us/licences";
     }
 
     @GetMapping("/public-info/certificates")
-    public String publicInfoCertifications(){
+    public String publicInfoCertifications(Model model){
+        List<String> imgNames = new ArrayList<>();
+        String directoryPath = "src/main/resources/static/images/licences";
+
+        File directory = new File(directoryPath);
+        File[] files = directory.listFiles();
+
+        if (files != null && directory.isDirectory()) {
+            for (File file : files) {
+                if (file.isFile()) {
+                    imgNames.add(file.getName());
+                }
+            }
+        }
+        model.addAttribute("images", imgNames);
         return "about-us/certificates";
     }
 
