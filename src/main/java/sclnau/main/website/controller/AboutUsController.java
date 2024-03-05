@@ -29,7 +29,9 @@ public class AboutUsController {
         this.galleryPhotoService = galleryPhotoService;
         this.newsService = newsService;
     }
-
+//
+//    INDEX
+//
     @GetMapping("/news")
     public String news(Model model, @RequestParam(defaultValue = "0") int page){
 
@@ -59,6 +61,26 @@ public class AboutUsController {
         return "about-us/licenced-volume";
     }
 
+    @GetMapping("/international-relations")
+    public String internationalRelations(){
+        return "about-us/international-relations";
+    }
+
+    @GetMapping("/historical-sequence")
+    public String historicalSequence(){
+        return "about-us/historical-sequence";
+    }
+
+    @GetMapping("/photo-gallery")
+    public String photoGallery(Model model){
+        model.addAttribute("photos", galleryPhotoService.getAll());
+
+        return "about-us/photo-gallery";
+    }
+
+//
+//    PUBLIC INFO
+//
     @GetMapping("/public-info")
     public String publicInfo(){
         return "about-us/public-info";
@@ -88,21 +110,14 @@ public class AboutUsController {
         return "about-us/certificates";
     }
 
-    @GetMapping("/international-relations")
-    public String internationalRelations(){
-        return "about-us/international-relations";
+    @GetMapping("/public-info/financial-activity/paid-services")
+    public String paidServices(){
+        return "about-us/paid-services";
     }
 
-    @GetMapping("/historical-sequence")
-    public String historicalSequence(){
-        return "about-us/historical-sequence";
-    }
-
-    @GetMapping("/photo-gallery")
-    public String photoGallery(Model model){
-        model.addAttribute("photos", galleryPhotoService.getAll());
-
-        return "about-us/photo-gallery";
+    @GetMapping("/public-info/financial-activity/reportings")
+    public String reportings(){
+        return "about-us/reportings";
     }
 
 }
