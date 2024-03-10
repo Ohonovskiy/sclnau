@@ -130,4 +130,14 @@ public class AboutUsController {
         return "about-us/library-terms";
     }
 
+    @GetMapping("/library/new")
+    public String libraryNew(){
+        return "about-us/library-new";
+    }
+
+    @GetMapping("/library/periodicals")
+    public String libraryPeriodicals(){
+        return "about-us/library-periodicals";
+    }
+
 }
