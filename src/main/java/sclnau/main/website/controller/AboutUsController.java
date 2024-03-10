@@ -125,4 +125,9 @@ public class AboutUsController {
         return "about-us/payment-details";
     }
 
+    @GetMapping("/library/terms")
+    public String libraryTerms(){
+        return "about-us/library-terms";
+    }
+
 }
