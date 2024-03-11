@@ -120,6 +120,11 @@ public class AboutUsController {
         return "about-us/cadre";
     }
 
+    @GetMapping("/public-info/activity-reports")
+    public String publicActivityReports(){
+        return "about-us/activity-reports";
+    }
+
     @GetMapping("/public-info/financial-activity/paid-services")
     public String paidServices(){
         return "about-us/paid-services";
