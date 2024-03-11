@@ -115,6 +115,11 @@ public class AboutUsController {
         return "about-us/availability-of-the-educational-institution";
     }
 
+    @GetMapping("/public-info/cadre")
+    public String publicInfoCadre(){
+        return "about-us/cadre";
+    }
+
     @GetMapping("/public-info/financial-activity/paid-services")
     public String paidServices(){
         return "about-us/paid-services";

@@ -2442,3 +2442,8 @@ responsive
   }
 
 }
+
+.highlight {
+  font-size: 32px;
+  background-image: linear-gradient(-100deg, rgba(255, 255, 255, 0), var(--primary-color) 150%, rgba(255, 255, 255, 0));
+}
