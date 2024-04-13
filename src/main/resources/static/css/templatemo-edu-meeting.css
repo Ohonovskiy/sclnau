@@ -1862,6 +1862,39 @@ section.our-facts .video img {
   max-width: 56px;
 }
 
+/*
+MATERIAL TECH BASE
+*/
+
+section.material-technical-base {
+  margin-bottom: 30px;
+}
+
+section.material-technical-base .icon-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 100px;
+}
+
+section.material-technical-base .icon-container .icon {
+  text-align: center;
+}
+
+section.material-technical-base .icon-container .icon i {
+  font-size: 100px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+section.material-technical-base .icon-container .label {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+
+
 
 /* 
 ---------------------------------------------

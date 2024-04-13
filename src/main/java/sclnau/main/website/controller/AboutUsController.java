@@ -56,6 +56,12 @@ public class AboutUsController {
         return "about-us/news-details";
     }
 
+    @GetMapping("/material-technical-base")
+    public String materialTechBase(){
+        return "about-us/material-tech-base";
+    }
+
+
     @GetMapping("/licenced-volume")
     public String licencedVolume(){
         return "about-us/licenced-volume";
@@ -139,6 +145,17 @@ public class AboutUsController {
     public String paymentDetails(){
         return "about-us/payment-details";
     }
+
+    @GetMapping("/public-info/regulations/overall")
+    public String publicInfoDocuments(){
+        return "about-us/overall-regulations";
+    }
+
+    @GetMapping("/public-info/regulations/educational-process")
+    public String publicInfoRegEduProcess(){
+        return "about-us/educational-process";
+    }
+
 
     @GetMapping("/library/terms")
     public String libraryTerms(){
