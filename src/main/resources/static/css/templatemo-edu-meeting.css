@@ -218,8 +218,9 @@ table
 
 /* Styles for the table */
 .specialties-page {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 140px;
+  padding-bottom: 140px;
+
 }
 .specialties-page .specialties-table {
   width: 100%;
@@ -1866,32 +1867,103 @@ section.our-facts .video img {
 MATERIAL TECH BASE
 */
 
-section.material-technical-base {
-  margin-bottom: 30px;
+.material-technical-base {
+  padding-top: 140px;
 }
 
-section.material-technical-base .icon-container {
+.material-technical-base .icon-container {
   display: flex;
-  justify-content: space-between;
+
+  @media screen and (min-width: 797px) {
+    justify-content: space-evenly;
+  }
+
+  @media screen and (max-width: 796px) {
+    flex-direction: column;
+  }
+
   margin-bottom: 20px;
-  font-size: 100px;
 }
 
-section.material-technical-base .icon-container .icon {
+.material-technical-base .icon-container .icon {
   text-align: center;
+  padding-bottom: 40px;
 }
 
-section.material-technical-base .icon-container .icon i {
+.material-technical-base .icon-container .icon .count {
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.material-technical-base .icon-container .icon i {
   font-size: 100px;
   color: var(--primary-color);
   cursor: pointer;
 }
 
-section.material-technical-base .icon-container .label {
+.material-technical-base .icon-container .label {
   margin-top: 10px;
   font-size: 18px;
   color: var(--primary-color);
 }
+
+.material-technical-base .icon-container {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+.left-block,
+.right-block {
+  width: 50%;
+  font-size: 20px;
+}
+
+.left-block h2,
+.right-block h2 {
+  font-size: 20px;
+  font-weight: 550;
+  color: var(--primary-color);
+}
+
+.left-block ul,
+.right-block ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-block li,
+.right-block li {
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+/* Add a new container for the left and right blocks */
+.block-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Adjust as needed */
+@media screen and (max-width: 796px) {
+  .material-technical-base .icon-container {
+    flex-direction: column;
+  }
+  .block-container {
+    flex-direction: column;
+  }
+  .left-block,
+  .right-block {
+    width: 100%;
+  }
+}
+
+
+
 
 
 
