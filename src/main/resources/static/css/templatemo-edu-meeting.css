@@ -29,6 +29,12 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+@font-face {
+  font-family: 'Monitoring-header'; /*a name to be used later*/
+  src: url('static/fonts/Mauryssel_Bold.ttf'); /*URL to font*/
+}
+
 /* 
 ---------------------------------------------
 reset
@@ -1932,14 +1938,41 @@ MATERIAL TECH BASE
   padding: 0;
 }
 
+.left-block h2.monitoring-header,
+.right-block h2.monitoring-header {
+  color: #000000; /* Black color */
+  font-size: 35px;
+  font-weight: 800;
+}
+
 .left-block li,
 .right-block li {
   margin-bottom: 30px;
   max-width: 600px;
 }
 
+.left-block ul.monitoring li,
+.right-block ul.monitoring li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  max-width: 600px;
+}
+
 .highlight {
   color: var(--primary-color);
+}
+
+.monitoring-header {
+  font-family: 'Monitoring-header', Arial, sans-serif; /* Use the custom font, fallback to Arial if not available */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: 800;
+  text-align: center;
+  font-size: 35px;
+  color: #000000;
+
+  padding-bottom: 3px; /* Adjust the spacing as needed */
+  border-bottom: 3px solid var(--primary-color); /* Adjust the thickness of the underline */
+  margin-bottom: 30px;
 }
 
 /* Add a new container for the left and right blocks */

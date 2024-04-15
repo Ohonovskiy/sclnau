@@ -61,6 +61,10 @@ public class AboutUsController {
         return "about-us/material-tech-base";
     }
 
+    @GetMapping("/monitoring")
+    public String monitoring(){
+        return "about-us/monitoring";
+    }
 
     @GetMapping("/licenced-volume")
     public String licencedVolume(){
