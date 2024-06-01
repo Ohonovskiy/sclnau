@@ -160,7 +160,9 @@ public class AboutUsController {
         return "about-us/public-info/educational-process";
     }
 
-
+/*
+* LIBRARY
+* */
     @GetMapping("/library/terms")
     public String libraryTerms(){
         return "about-us/library/library-terms";
