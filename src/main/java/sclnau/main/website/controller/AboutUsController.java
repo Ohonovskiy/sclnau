@@ -93,12 +93,12 @@ public class AboutUsController {
 //
     @GetMapping("/public-info")
     public String publicInfo(){
-        return "about-us/public-info";
+        return "about-us/public-info/public-info";
     }
 
     @GetMapping("/public-info/licences")
     public String publicInfoLicence(){
-        return "about-us/licences";
+        return "about-us/public-info/licences";
     }
 
     @GetMapping("/public-info/certificates")
@@ -117,63 +117,63 @@ public class AboutUsController {
             }
         }
         model.addAttribute("images", imgNames);
-        return "about-us/certificates";
+        return "about-us/public-info/certificates";
     }
 
     @GetMapping("/public-info/availability")
     public String publicInfoAvailability(){
-        return "about-us/availability-of-the-educational-institution";
+        return "about-us/public-info/availability-of-the-educational-institution";
     }
 
     @GetMapping("/public-info/cadre")
     public String publicInfoCadre(){
-        return "about-us/cadre";
+        return "about-us/public-info/cadre";
     }
 
     @GetMapping("/public-info/activity-reports")
     public String publicActivityReports(){
-        return "about-us/activity-reports";
+        return "about-us/public-info/activity-reports";
     }
 
     @GetMapping("/public-info/financial-activity/paid-services")
     public String paidServices(){
-        return "about-us/paid-services";
+        return "about-us/public-info/paid-services";
     }
 
     @GetMapping("/public-info/financial-activity/reportings")
     public String reportings(){
-        return "about-us/reportings";
+        return "about-us/public-info/reportings";
     }
 
     @GetMapping("/public-info/financial-activity/payment-details")
     public String paymentDetails(){
-        return "about-us/payment-details";
+        return "about-us/public-info/payment-details";
     }
 
     @GetMapping("/public-info/regulations/overall")
     public String publicInfoDocuments(){
-        return "about-us/overall-regulations";
+        return "about-us/public-info/overall-regulations";
     }
 
     @GetMapping("/public-info/regulations/educational-process")
     public String publicInfoRegEduProcess(){
-        return "about-us/educational-process";
+        return "about-us/public-info/educational-process";
     }
 
 
     @GetMapping("/library/terms")
     public String libraryTerms(){
-        return "about-us/library-terms";
+        return "about-us/library/library-terms";
     }
 
     @GetMapping("/library/new")
     public String libraryNew(){
-        return "about-us/library-new";
+        return "about-us/library/library-new";
     }
 
     @GetMapping("/library/periodicals")
     public String libraryPeriodicals(){
-        return "about-us/library-periodicals";
+        return "about-us/library/library-periodicals";
     }
 
 }
