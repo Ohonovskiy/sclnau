@@ -1,37 +1,46 @@
 package sclnau.main.website.service;
 
-import org.springframework.data.domain.Sort;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import sclnau.main.website.entity.GalleryPhoto;
-import sclnau.main.website.repository.GalleryPhotoRepo;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class GalleryPhotoService {
-    private final GalleryPhotoRepo galleryPhotoRepo;
+    @Value("${gallery.path}")
+    private String galleryPath;
 
-    public GalleryPhotoService(GalleryPhotoRepo galleryPhotoRepo) {
-        this.galleryPhotoRepo = galleryPhotoRepo;
+    public Set<File> getAll() {
+        return Stream.of(Objects.requireNonNull(new File(galleryPath).listFiles()))
+                .filter(file -> !file.isDirectory())
+                .collect(Collectors.toSet());
     }
 
-    public void save(GalleryPhoto galleryPhoto){
-        galleryPhotoRepo.save(galleryPhoto);
+    public List<String> getAllNames(){
+        return Stream.of(Objects.requireNonNull(new File(galleryPath).listFiles()))
+                .filter(file -> !file.isDirectory())
+                .map(File::getName)
+                .collect(Collectors.toList());
     }
 
-    public void remove(GalleryPhoto galleryPhoto){
-        galleryPhotoRepo.delete(galleryPhoto);
-    }
+    public void save(MultipartFile file) throws IOException {
+        byte[] bytes = file.getBytes();
+        Path directoryPath = Paths.get(galleryPath);
 
-    public void remove(Long id){
-        galleryPhotoRepo.deleteById(id);
-    }
+        if (!Files.exists(directoryPath)) {
+            Files.createDirectories(directoryPath);
+        }
 
-    public GalleryPhoto getById(Long id){
-        return galleryPhotoRepo.getReferenceById(id);
-    }
-
-    public List<GalleryPhoto> getAll(){
-        return galleryPhotoRepo.findAllByOrderByIdDesc();
+        String filename = UUID.randomUUID() + "." + file.getOriginalFilename().split("\\.")[1];
+        Path path = Paths.get(galleryPath  + filename);
+        Files.write(path, bytes);
     }
 }

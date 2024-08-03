@@ -1,12 +1,13 @@
 package sclnau.main.website.controller;
 
-import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import sclnau.main.website.entity.GalleryPhoto;
 import sclnau.main.website.entity.News;
 import sclnau.main.website.entity.Photo;
 import sclnau.main.website.service.GalleryPhotoService;
@@ -14,12 +15,8 @@ import sclnau.main.website.service.NewsService;
 import sclnau.main.website.service.PhotoService;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Controller
 @RequestMapping("/admin")
@@ -75,21 +72,7 @@ public class AdminController {
 
     @PostMapping("/photoGallery/upload")
     public String photoGalleryUploadPost(@RequestParam("file") MultipartFile file) throws IOException {
-        byte[] bytes = file.getBytes();
-        Path directoryPath = Paths.get(galleryPath);
-
-        if (!Files.exists(directoryPath)) {
-            Files.createDirectories(directoryPath);
-        }
-
-        String filename = UUID.randomUUID() + "." + file.getOriginalFilename().split("\\.")[1];
-        Path path = Paths.get(galleryPath  + filename);
-        Files.write(path, bytes);
-
-        GalleryPhoto galleryPhoto = new GalleryPhoto();
-        galleryPhoto.setFileName(filename);
-
-        galleryPhotoService.save(galleryPhoto);
+        galleryPhotoService.save(file);
 
         return "redirect:/admin/photoGallery";
     }

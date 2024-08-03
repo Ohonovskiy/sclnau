@@ -83,7 +83,7 @@ public class AboutUsController {
 
     @GetMapping("/photo-gallery")
     public String photoGallery(Model model){
-        model.addAttribute("photos", galleryPhotoService.getAll());
+        model.addAttribute("photos", galleryPhotoService.getAllNames());
 
         return "about-us/photo-gallery";
     }
