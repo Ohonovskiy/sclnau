@@ -88,6 +88,11 @@ public class AboutUsController {
         return "about-us/photo-gallery";
     }
 
+    @GetMapping("/trade-union-committee")
+    public String tradeUnionCommittee(){
+        return "about-us/trade-union-committee";
+    }
+
 //
 //    PUBLIC INFO
 //

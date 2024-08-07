@@ -1587,9 +1587,25 @@ section.apply-now .item p {
   margin-bottom: 20px;
 }
 
+section.apply-now .trade-union-committee img {
+  width: auto;
+  max-height: 450px;
+}
+
+section.apply-now .trade-union-committee h3 {
+  padding-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+section.apply-now .trade-union-committee p {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+
 .accordions {
   border-radius: 20px;
-  padding: 40px;
+  padding: 20px 40px 40px;
   background-color: #fff;
   margin-left: 45px;
 }
@@ -1607,6 +1623,10 @@ section.apply-now .item p {
   cursor: pointer;
   transition: color 200ms ease-in-out;
   border-bottom: 1px solid #fff;
+}
+
+.accordion-header h3 {
+
 }
 
 .accordion div span:first-child {
@@ -2188,8 +2208,8 @@ heading page
 section.heading-page {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../images/heading-bg.jpg) no-repeat fixed center center;
   background-size: cover;
-  padding-top: 230px;
-  padding-bottom: 110px;
+  padding-top: 180px;
+  padding-bottom: 90px;
   text-align: center;
 }
 
