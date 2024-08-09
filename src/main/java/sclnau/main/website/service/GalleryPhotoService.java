@@ -15,6 +15,7 @@ import java.util.stream.Stream;
 
 @Service
 public class GalleryPhotoService {
+
     @Value("${gallery.path}")
     private String galleryPath;
 
